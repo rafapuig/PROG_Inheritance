@@ -30,7 +30,7 @@ class AOSub extends AOSuper {
         super.print(); // Llama al método reemplazado (versión de AOSuper)
         // Es imposible llamar desde AOSub a la version de AOAncestor del método print porque ha sido reemplazada
         // en la clase AOSuper
-        super.printNotOverridden(); // Llama a la versión más próxima ascendiendo por la jerarquía
+        printNotOverridden(); // Llama a la versión más próxima ascendiendo por la jerarquía
     }
 }
 
