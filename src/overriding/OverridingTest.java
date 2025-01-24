@@ -34,17 +34,25 @@ class F extends E {
 
 public class OverridingTest {
     public static void main(String[] args) {
+        // Podemos asignar una referencia a un objeto cuyo tipo sea una clase A o descendente de A
+        // a una variable de tipo A
+        // Por eso, podemos usar a.print() en todas la siguientes instrucciones
+
+        // El método print ha sido reemplazado en algunas de las clases descendentes de A en la jerarquía
+
+        // El late binding realiza su magia llamando a la version apropiada del método print
+        // dependiendo de la clase de objeto al cual la variable a refiere en el momento de ejecutar a.print()
         A a = new A();
         a.print(); // A
-        B b = new B();
-        b.print(); // B
-        C c = new C();
-        c.print(); // B
-        D d = new D();
-        d.print(); // B
-        E e = new E();
-        e.print(); // E
-        F f = new F();
-        f.print(); // E
+        a = new B();
+        a.print(); // B
+        a = new C();
+        a.print(); // B
+        a = new D();
+        a.print(); // B
+        a = new E();
+        a.print(); // E
+        a = new F();
+        a.print(); // E
     }
 }
