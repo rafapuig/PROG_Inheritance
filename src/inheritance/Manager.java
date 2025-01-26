@@ -2,11 +2,11 @@ package inheritance;
 
 /**
  * La clase Manager hereda de la clase Employee
- * <p>
+ *
  * Aunque no se haya escrito código en el cuerpo de la clase Manager
  * Una instancia de tipo Manager se comporta como una de Empleado
- * <p>
- * La clase Manager hereda de los miembros de la clase base Empleado:
+ *
+ * La clase Manager hereda de los miembros de la clase base Employee:
  * el campo name y los métodos getName y setName
  * Para el código que usa instancias de la clase Manager es como si estos miembros se hubieran definido
  * directamente dentro del cuerpo de la clase Manager
@@ -30,6 +30,7 @@ class ManagerTest {
         Manager manager = new Manager();
         // Aunque la clase Manager no declara un método setName
         // Lo hereda, es decir, es como si realmente se hubiera definido un método setName en la clase Manager
+        // La interfaz de la clase Manager cuenta con un miembro setName heredado desde la clase Employee
         manager.setName("Lorenzo Penco");
         // Aunque, la clase Manager no declara un método getName
         // Para el código cliente es como si la clase Manager hubiera definido el método getName
