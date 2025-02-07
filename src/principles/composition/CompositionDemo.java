@@ -4,10 +4,16 @@ abstract class Transport {
     private final Engine engine;
     private Driver driver;
 
+    /**
+     * El transporte no puede cambiar de motor una vez creado
+     */
     public Transport(Engine engine) {
         this.engine = engine;
     }
 
+    /**
+     * El transporte puede cambiar de conductor
+     */
     public Transport setDriver(Driver driver) {
         this.driver = driver;
         return this;
@@ -51,7 +57,12 @@ class ElectricEngine extends Engine {
     }
 }
 
-
+/**
+ * La forma correcta de programar el tipo Driver es mediante una interface
+ * Porque es una clase abstracta en la que todos sus miembros son abstractos
+ * y no tiene estado (no hay ningún campo de instancia)
+ * (ya se verá en el tema de interfaces)
+ */
 abstract class Driver {
     public abstract void navigate();
 }
@@ -64,7 +75,6 @@ class Robot extends Driver {
 }
 
 class Human extends Driver {
-
     @Override
     public void navigate() {
         System.out.println("Human navigated");
