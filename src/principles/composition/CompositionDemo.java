@@ -91,11 +91,16 @@ public class CompositionDemo {
         Transport autopilotCombustionEngineCar = new Car(new CombustionEngine()).setDriver(robotDriver);
         autopilotCombustionEngineCar.deliver("Madrid","Paquete 001");
 
-        Transport autopilotElectricEngineTruck = new Truck(new ElectricEngine());
-        autopilotElectricEngineTruck.setDriver(robotDriver);
-        autopilotElectricEngineTruck.deliver("Valencia", "Paquete 002");
-        autopilotElectricEngineTruck.setDriver(humanDriver);
-        autopilotElectricEngineTruck.deliver("Barcelona", "Paquete 003");
+        Transport electricEngineTruck = new Truck(new ElectricEngine());
+        electricEngineTruck.setDriver(robotDriver);
+        electricEngineTruck.deliver("Valencia", "Paquete 002");
+        electricEngineTruck.setDriver(humanDriver);
+        electricEngineTruck.deliver("Barcelona", "Paquete 003");
+
+        Transport combustionEngineTruck = new Truck(new CombustionEngine());
+        combustionEngineTruck.setDriver(humanDriver);
+
+        Transport electricEngineCar = new Car(new ElectricEngine());
     }
 }
 

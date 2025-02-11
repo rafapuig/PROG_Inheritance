@@ -39,7 +39,7 @@ abstract sealed class Person permits Man, Woman {
     abstract String getFormalTitle();
 
     // El contar con el método abstracto getFormalTitle permite llamarlo en los métodos de la clase
-    // y mediante el late binding dependiendo del tipo del objeto se determinará la implementación que se usa
+    // y mediante el late binding dependiendo del tipo real del objeto se determinará la implementación que se usa
     @Override
     public String toString() {
         return getFormalTitle() + " " + getName();
@@ -49,6 +49,8 @@ abstract sealed class Person permits Man, Woman {
 // A la clase Man le es permitido heredar de la clase Person
 // Sin embargo, al estar declarada como final, no se puede definir subclases de Man
 final class Man extends Person {
+
+    private final boolean hemophiliac;
 
     // La clase Man cuenta con un constructor al que hay que proporcionar los valores para inicializar los
     // campos de la superclase name y age más el campo adicional declarado en la clase Man hemophiliac
@@ -62,8 +64,6 @@ final class Man extends Person {
         // La llamada al constructor de la superclase inicializa el nombre y la edad
         this.hemophiliac = hemophiliac;
     }
-
-    boolean hemophiliac;
 
     public boolean isHemophiliac() {
         return hemophiliac;
@@ -81,15 +81,19 @@ final class Man extends Person {
 // Sin embargo, al estar declarada como final, no se puede definir subclases de Woman
 final class Woman extends Person {
 
+    private boolean pregnant;
+
     public Woman(String name, int age, boolean pregnant) {
         super(name, age); // Llamada al constructor de la clase base para (inicializar la persona que toda mujer es)
         this.pregnant = pregnant;
     }
 
-    boolean pregnant;
-
     public boolean isPregnant() {
         return pregnant;
+    }
+
+    public void setPregnant(boolean pregnant) {
+        this.pregnant = pregnant;
     }
 
     @Override
@@ -103,8 +107,8 @@ public class PatternMatchingDemo {
 
     static String getFormalName(Person person) {
         return switch (person) {
-            case Man ignored -> "Sr. ";
-            case Woman ignored -> "Sra. ";
+            case Man ignored -> "Don. ";
+            case Woman ignored -> "Doña. ";
         } + person.getName();
     }
 
