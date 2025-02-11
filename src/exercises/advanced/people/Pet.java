@@ -1,4 +1,4 @@
-package exercises.advanced;
+package exercises.advanced.people;
 
 public class Pet implements Nameable, Vaccinable {
     private String name;

@@ -1,4 +1,4 @@
-package exercises.advanced.composition;
+package exercises.composition;
 
 
 import java.util.StringJoiner;

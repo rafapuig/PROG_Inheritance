@@ -1,4 +1,4 @@
-package exercises.advanced;
+package exercises.advanced.people;
 
 public class Vaccine implements Nameable {
 

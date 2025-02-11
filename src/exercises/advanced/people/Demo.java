@@ -1,4 +1,4 @@
-package exercises.advanced;
+package exercises.advanced.people;
 
 public class Demo {
     public static void main(String[] args) {
@@ -11,8 +11,8 @@ public class Demo {
         Woman maria = new Woman("Maria", "de la Virgen");
         Man jose = new Man("Jose", "Carpenter");
 
-        Orinator dePie = new OrinarDePie();
-        Orinator sentado = new OrinarSentado();
+        Urinator dePie = new StandingUpUrinator();
+        Urinator sentado = new SittingDownUrinator();
 
         pet.getName();
         person.getName();
@@ -32,23 +32,23 @@ public class Demo {
 
         man.pregnate(woman);
 
-        person.orinar();
-        man.orinar();
-        woman.orinar();
-        maria.orinar();
-        jose.orinar();
+        person.urinate();
+        man.urinate();
+        woman.urinate();
+        maria.urinate();
+        jose.urinate();
 
-        maria.setOrinator(dePie);
-        maria.orinar();
-        maria.setOrinator(sentado);
-        maria.orinar();
-        maria.setOrinator(null);
-        maria.orinar();
+        maria.setUrinator(dePie);
+        maria.urinate();
+        maria.setUrinator(sentado);
+        maria.urinate();
+        maria.setUrinator(null);
+        maria.urinate();
 
-        jose.setOrinator(sentado);
-        jose.orinar();
-        jose.setOrinator(null);
-        jose.orinar();
+        jose.setUrinator(sentado);
+        jose.urinate();
+        jose.setUrinator(null);
+        jose.urinate();
 
 
         applyVaccine(pet, vaccine);

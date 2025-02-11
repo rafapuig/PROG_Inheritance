@@ -1,4 +1,4 @@
-package exercises.advanced;
+package exercises.advanced.people;
 
 
 public class Person implements Nameable, Vaccinable {
@@ -26,15 +26,15 @@ public class Person implements Nameable, Vaccinable {
 
 
 
-    protected Orinator orinator = null;
+    protected Urinator urinator = null;
 
-    public void setOrinator(Orinator orinator) {
-        this.orinator = orinator;
+    public void setUrinator(Urinator urinator) {
+        this.urinator = urinator;
     }
 
-    public void orinar() {
-        if (orinator != null) {
-            orinator.orinate(this);
+    public void urinate() {
+        if (urinator != null) {
+            urinator.urinate(this);
         } else {
             System.out.println(getName() + " orinando...");
         }

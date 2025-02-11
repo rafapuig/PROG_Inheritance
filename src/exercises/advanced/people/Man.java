@@ -1,10 +1,10 @@
-package exercises.advanced;
+package exercises.advanced.people;
 
 public class Man extends Person {
 
     public Man(String name, String surname) {
         super(name,surname);
-        orinator = new OrinarDePie();
+        urinator = new StandingUpUrinator();
     }
 
     @Override

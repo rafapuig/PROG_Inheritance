@@ -1,10 +1,10 @@
-package exercises.advanced;
+package exercises.advanced.people;
 
 public class Woman extends Person {
 
     public Woman(String name, String surname) {
         super(name, surname);
-        orinator = new OrinarSentado();
+        urinator = new SittingDownUrinator();
     }
 
     @Override
@@ -15,14 +15,11 @@ public class Woman extends Person {
     private boolean pregnate = false;
 
     public void becomePregnant() {
-        if (pregnate == false) pregnate = true;
+        if (!pregnate) pregnate = true;
     }
 
     public void labor() {
         pregnate = false;
     }
-
-
-
 
 }

@@ -15,8 +15,9 @@ abstract sealed class Person permits Man, Woman {
         return name;
     }
 
-    abstract Gender getGender();
+    public abstract Gender getGender();
 }
+
 
 final class Man extends Person {
 
@@ -25,10 +26,11 @@ final class Man extends Person {
     }
 
     @Override
-    Gender getGender() {
+    public Gender getGender() {
         return Gender.MALE;
     }
 }
+
 
 final class Woman extends Person {
 
@@ -37,7 +39,7 @@ final class Woman extends Person {
     }
 
     @Override
-    Gender getGender() {
+    public Gender getGender() {
         return Gender.FEMALE;
     }
 }

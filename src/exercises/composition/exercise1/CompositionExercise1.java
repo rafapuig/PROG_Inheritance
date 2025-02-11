@@ -1,4 +1,4 @@
-package exercises.advanced.composition.exercise1;
+package exercises.composition.exercise1;
 
 class Time {
     private int hour;
