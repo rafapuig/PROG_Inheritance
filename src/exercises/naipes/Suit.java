@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public abstract sealed class Suit {
 
-    public static Suit OROS;
+    public static final Suit OROS = new Oros();
     public static final Suit COPAS = new Copas();
     public static final Suit ESPADAS = new Espadas();
     public static final Suit BASTOS = new Bastos();
@@ -69,7 +69,7 @@ public abstract sealed class Suit {
     static final class Oros extends Suit {
 
         static {
-            OROS = new Oros();
+            //OROS = new Oros();
         }
 
         private Oros() {
@@ -133,6 +133,9 @@ class SuitDemo {
         System.out.println(Suit.COPAS);
         System.out.println(Suit.ESPADAS);
         System.out.println(Suit.BASTOS);
+
+
+        //Suit.OROS = Suit.ESPADAS; // No deberia
 
         Suit oros = Suit.OROS;
         Suit copas = Suit.COPAS;

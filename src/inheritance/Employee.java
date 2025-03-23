@@ -2,8 +2,6 @@ package inheritance;
 
 // Todas las clases que definimos en Java heredan implícitamente de la clase Object
 
-import java.util.Objects;
-
 /**
  * La clase Employee no especifica una superclase de la cual extiende
  * Eso significa que su superclase es la clase Object del paquete java.lang
